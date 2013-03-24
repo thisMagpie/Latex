@@ -18,38 +18,15 @@
 %
 
 \documentclass{article}
-\usepackage[paperwidth=.5\paperwidth,paperheight=.25\paperheight]{geometry}
+\usepackage[paperwidth=.47\paperwidth,paperheight=.25\paperheight]{geometry}
 \usepackage{pgfpages}
 \usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc}
-\usepackage{color}
-\usepackage{float}
-\usepackage{parskip}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \pagestyle{empty}
-\usepackage{caption}
 \thispagestyle{empty}
-\pgfpagesuselayout{8 on 1}[a4paper]
 
-%\mode<presentation>
-%{
-%    \usetheme{Warsaw}
-%    \useoutertheme[subsection=false]{miniframes}
-%    \usefonttheme[onlylarge]{structuresmallcapsserif}
-%    \setbeamercovered{transparent}
-%    \setbeamercolor{title}{fg=red!80!black}
-%}
-%
-\pagestyle{empty}
-\thispagestyle{empty}
-\pgfpagesuselayout{8 on 1}[a4paper,
-       , border shrink=1mm
-        ]        
-        
-
-
+\pgfpagesuselayout{8 on 1}[a4paper]        
 \makeatletter
 \@tempcnta=1\relax
 \loop\ifnum\@tempcnta<9\relax
@@ -60,16 +37,15 @@
 \makeatother
 
 
-\newenvironment{flashcard}[2][\parskipfill]{%
+\newenvironment{flashcard}[2][]{%
 \noindent   \textsc{#1}
-
 \vfill
-\centerline{{\Large{#2}}}
+\centerline{{\noindent  \Large{#2}}}
 \vfill
 \newpage
+\noindent  
 }
 {\newpage}
-
 
 
 \begin{document}
