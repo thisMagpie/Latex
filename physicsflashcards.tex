@@ -42,12 +42,11 @@
 %    \setbeamercolor{title}{fg=red!80!black}
 %}
 %
-%\pagestyle{empty}
-%\thispagestyle{empty}
-%\pgfpagesuselayout{8 on 1}[a4paper,
-%        , border shrink=2mm
-%        ]
-%        
+\pagestyle{empty}
+\thispagestyle{empty}
+\pgfpagesuselayout{8 on 1}[a4paper,
+       , border shrink=1mm
+        ]        
         
 
 
@@ -61,8 +60,8 @@
 \makeatother
 
 
-\newenvironment{flashcard}[2][]{%
-\noindent  \textsc{#1}
+\newenvironment{flashcard}[2][\parskipfill]{%
+\noindent   \textsc{#1}
 
 \vfill
 \centerline{{\Large{#2}}}
@@ -156,15 +155,55 @@ A thermally isolated system has adiabatic walls.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\begin{flashcard}[Electromagnetism]{What is Maxwell's II and what does it tell us?}
-
+\begin{flashcard}[Electromagnetism]{What is Maxwell's II  and what does it tell us?}
 What is Maxwell's II and what does it tell us?
-
 \vspace*{\stretch{1}}
 $$\nabla \cdot \mathbf{B} = 0$$
 \vspace*{\stretch{1}}
 \end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Statistical Mechanics]{￼￼￼￼What is the equilibrium entropy of an isolated system of N constituents with energy E? }
+What is the equilibrium entropy of an isolated system of N constituents with energy E?
+\vspace*{\stretch{1}}
+$$S(N, E) = k ln \Omega(N, E, {\alpha*})$$
+\vspace*{\stretch{1}}
+
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Diffraction physics]{Define the electric displacement of a dialectric.}
+Define the electric displacement of a dialectric
+\vspace*{\stretch{1}}
+$$\underline{D}=\epsilon_0 \underline{E}+\underline{P}$$
+Where $ \underline{E}=$ Electric field , $\underline{P}=$ Polarisation
+\vspace*{\stretch{1}}
+
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Diffraction Physics]{What are the refractive indices of $\mathrm{Mg F_{2}}$ and $\mathrm{Al_{2}O_{3}}$ ?}
+Define the electric displacement of a dialectric
+
+\begin{table}[htdp]
+\caption{default}
+\begin{tabular}{| r | c | r | c | r |}
+ & n  \\
+\hline
+Magnesium Fluoride & $\mathrm{Mg F_{2}}$ & 1.38 \\
+Aluminium Oxide & $\mathrm{Al_{2}O_{3}}$ & 1.62 \\
+\hline
+
+\end{tabular}
+\label{default}
+\end{table}%
+
+
+\end{flashcard}
+
 
 
 \end{document}
