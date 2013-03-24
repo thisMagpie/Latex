@@ -1,0 +1,31 @@
+\documentclass{report}
+\usepackage{hyperref} %% to turn the links clickable and load this before cleveref
+\usepackage{cleveref}
+
+\crefname{table}{table}{tables}
+\Crefname{table}{Table}{Tables}
+\crefname{figure}{figure}{figures}
+\Crefname{figure}{Figure}{Figures}
+\crefname{equation}{equation}{equations}
+\Crefname{Equation}{Equation}{Equation}
+
+\begin{document}
+
+\begin{figure}[!htb]
+  \centering
+  \rule{20pt}{20pt}
+  \caption{My figure}
+  \label{fig:myfig}
+\end{figure}
+
+\begin{equation}
+\label{eq:grav} F=\frac{G m_{1} m_{2}}{r^{2}}
+\end{equation}
+
+\begin{itemize}
+  \item Use \cref{fig:myfig} mid sentence.
+ \item \Cref{fig:myfig} is appropriate for the beginning of a sentence and~\cref{eq:grav}. \Cref{eq:grav} is printing \verb|Equation| rather than \verb|equation|.
+\end{itemize}
+
+
+\end{document}

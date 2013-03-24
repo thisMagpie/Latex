@@ -1,0 +1,170 @@
+%
+%    physicsflashcards
+%   =============
+%    Copyright (C) 2013  Magdalen Berns (with some flashcard formatting help from users of tex.stackexchange.com)
+%    
+%   This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%   the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%
+
+\documentclass{article}
+\usepackage[paperwidth=.5\paperwidth,paperheight=.25\paperheight]{geometry}
+\usepackage{pgfpages}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{float}
+\usepackage{parskip}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\pagestyle{empty}
+\usepackage{caption}
+\thispagestyle{empty}
+\pgfpagesuselayout{8 on 1}[a4paper]
+
+%\mode<presentation>
+%{
+%    \usetheme{Warsaw}
+%    \useoutertheme[subsection=false]{miniframes}
+%    \usefonttheme[onlylarge]{structuresmallcapsserif}
+%    \setbeamercovered{transparent}
+%    \setbeamercolor{title}{fg=red!80!black}
+%}
+%
+%\pagestyle{empty}
+%\thispagestyle{empty}
+%\pgfpagesuselayout{8 on 1}[a4paper,
+%        , border shrink=2mm
+%        ]
+%        
+        
+
+
+\makeatletter
+\@tempcnta=1\relax
+\loop\ifnum\@tempcnta<9\relax
+\pgf@pset{\the\@tempcnta}{bordercode}{\pgfusepath{stroke}}
+
+\advance\@tempcnta by 1\relax
+\repeat
+\makeatother
+
+
+\newenvironment{flashcard}[2][]{%
+\noindent  \textsc{#1}
+
+\vfill
+\centerline{{\Large{#2}}}
+\vfill
+\newpage
+}
+{\newpage}
+
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Thermodynamics]{Describe a system}
+\centering
+{Describe a system}
+
+\vspace*{\stretch{1}}
+A system is a particular part of the universe.
+\vspace*{\stretch{1}}
+\newline
+
+\end{flashcard}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{flashcard}[Thermodynamics]{Describe the surroundings of a system}
+\centering
+{Describe the surroundings of a system}
+
+\vspace*{\stretch{1}}
+The part of the universe which is outside (i.e. surrounding) a system.
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{flashcard}[Thermodynamics]{Describe the boundary of a system}
+Describe the boundary of a system.
+
+\vspace*{\stretch{1}}
+The boundary (or wall) of a system is the thing which separates it from its surroundings. 
+
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Thermodynamics]{Describe the boundary of a system}
+Describe the boundary of a system.
+
+\vspace*{\stretch{1}}
+The boundary (or wall) of a system is the thing which separates it from its surroundings. 
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Thermodynamics]{Describe a closed system}
+Describe a closed system.
+
+\vspace*{\stretch{1}}
+A closed system is a system where no matter is exchanged, only energy.
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Thermodynamics]{Describe how adiabatic walls.}
+
+Describe adiabatic walls.
+
+\vspace*{\stretch{1}}
+Adiabatic walls prevent thermal interaction (i.e. heat exchange) 
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Thermodynamics]{What type of walls does a thermally isolated system have?}
+
+What type of walls does a thermally
+ isolated system have?
+
+\vspace*{\stretch{1}}
+A thermally isolated system has adiabatic walls.
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{flashcard}[Electromagnetism]{What is Maxwell's II and what does it tell us?}
+
+What is Maxwell's II and what does it tell us?
+
+\vspace*{\stretch{1}}
+$$\nabla \cdot \mathbf{B} = 0$$
+\vspace*{\stretch{1}}
+\end{flashcard}
+
+
+\end{document}

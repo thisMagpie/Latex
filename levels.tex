@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows}
+\usepackage{nicefrac}
+\begin{document}
+  \begin{tikzpicture}[ scale=0.5, level/.style={very thick} ]
+    \tikzset{photon/.style={<->,decorate, decoration={snake}, draw=red,
+      line width=0.4mm,>=triangle 60}}
+    \tikzset{rotdis/.style={<->,decorate, draw=red,line width=0.4mm}}
+    % Draw the energy levels.
+       % Breit Rabi
+     \draw[level] ( 19.5cm, 6.8cm) -- ( 21cm, 6.8cm); 
+     \draw[level] ( 19.5cm, 7.5cm) -- ( 21cm, 7.5cm); 
+     \draw[level] ( 19.5cm, 8.2cm) -- ( 21cm, 8.2cm); 
+     \draw[level] ( 19.5cm, 0cm) -- ( 21cm, 0cm); 
+     \draw[level,blue]  ( 21cm, 6.8cm) -- (25cm,-1cm); 
+     \draw[level,blue]  ( 21cm, 7.5cm) -- (25cm,12cm);  
+     \draw[level,blue]  ( 21cm, 8.2cm) -- (25cm,15cm);  
+     \draw[level,blue] ( 21cm, 0cm)  --(25cm,-4cm);  
+     \draw[](22cm,17cm)node[font=\large]{\underline{Breit Rabi}};
+    % Paschen Back
+    \draw[level,blue] ( 25cm, -1cm) -- ( 29cm,-1cm); 
+     \draw[level,blue] ( 25cm, 12cm) -- ( 29cm, 12cm); 
+     \draw[level,blue] ( 25cm, 15cm) -- ( 32cm, 15cm); 
+     \draw[level,blue] ( 25cm, -4cm) -- ( 32cm, -4cm); 
+     \draw[photon] ( 31.5cm, -4cm) -- ( 31.5cm, 15cm); 
+     \draw[photon] ( 28.cm, -1cm) -- ( 28.cm, 12cm); 
+     \draw[rotdis] (26cm,-2.5cm) -- (26cm,6cm)node at (26cm,4cm)[left]
+      {$\frac{1}{2}g_{e}\mu_{B}B$};
+    \draw[rotdis] (26cm,6cm) -- (26cm,13.5cm)node at (26cm,8cm)[left]
+      {$\frac{1}{2}g_{e}\mu_{B}B$};
+    \draw[rotdis] (28cm,-4cm) -- (28cm,-1cm)node[right,midway]{$1/2 A_{H}$};
+    \draw[rotdis] (28cm,12cm) -- (28cm,15cm)node[right,midway]{$1/2 A_{H}$};
+    \draw[](35cm,-4cm)node[font=\large]{ $0=-\nicefrac{1}{2}+\nicefrac{1}{2}$};
+    \draw[](35cm,-1cm)node[font=\large]{$-1=-\nicefrac{1}{2}-\nicefrac{1}{2}$};
+    \draw[](35cm,12cm)node[font=\large]{ $0=\nicefrac{1}{2}-\nicefrac{1}{2}$};
+    \draw[](35cm,15cm)node[font=\large]{ $1=\nicefrac{1}{2}+\nicefrac{1}{2}$};
+    \draw[](35cm,17cm)node[font=\large]{$m=m_{j}+m_{i}$};
+    \draw[](28cm,17cm)node[font=\large]{\underline{Paschen Back}};
+    
+     \draw[<-, draw=green!50!black,line width=1mm](31.5cm,8cm)--(35cm,9cm)
+      node[right,font=\large]{$\Delta m=1$};
+    \draw[<-, draw=green!50!black,line width=1mm](28.cm,4cm)--(35cm,9cm);
+  \end{tikzpicture}
+\end{document}
