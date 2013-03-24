@@ -37,23 +37,17 @@
 \makeatother
 
 
-\newenvironment{flashcard}[2][]{%
-\noindent   \textsc{#1}
-\vfill
-\centerline{{\noindent  \Large{#2}}}
-\vfill
-\newpage
-\noindent  
-}
-{\newpage}
-
-
+\newenvironment{flashcard}[2][]
+  {\noindent\textsc{\Large#1}\par\vfill
+   {\centering\Large#2\par}
+   \vfill
+   \newpage\Large\centering
+  }
+  {\newpage}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{flashcard}[Thermodynamics]{Describe a system}
-\centering
-{Describe a system}
+\begin{flashcard}[Thermodynamics]{Describe what is meant by a system}
 
 \vspace*{\stretch{1}}
 A system is a particular part of the universe.
@@ -64,9 +58,7 @@ A system is a particular part of the universe.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{flashcard}[Thermodynamics]{Describe the surroundings of a system}
-\centering
-{Describe the surroundings of a system}
+\begin{flashcard}[Thermodynamics]{Describe what is meant by the surroundings of a system}
 
 \vspace*{\stretch{1}}
 The part of the universe which is outside (i.e. surrounding) a system.
@@ -77,7 +69,6 @@ The part of the universe which is outside (i.e. surrounding) a system.
 
 
 \begin{flashcard}[Thermodynamics]{Describe the boundary of a system}
-Describe the boundary of a system.
 
 \vspace*{\stretch{1}}
 The boundary (or wall) of a system is the thing which separates it from its surroundings. 
@@ -88,18 +79,16 @@ The boundary (or wall) of a system is the thing which separates it from its surr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{flashcard}[Thermodynamics]{Describe the boundary of a system}
-Describe the boundary of a system.
+\begin{flashcard}[Electromagnetism]{Explain Gauss' law for an electric field in words.}
 
 \vspace*{\stretch{1}}
-The boundary (or wall) of a system is the thing which separates it from its surroundings. 
+The total electric flux through any closed surface is proportional to its enclosed charge.
 \vspace*{\stretch{1}}
 \end{flashcard}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{flashcard}[Thermodynamics]{Describe a closed system}
-Describe a closed system.
 
 \vspace*{\stretch{1}}
 A closed system is a system where no matter is exchanged, only energy.
@@ -110,8 +99,6 @@ A closed system is a system where no matter is exchanged, only energy.
 
 \begin{flashcard}[Thermodynamics]{Describe how adiabatic walls.}
 
-Describe adiabatic walls.
-
 \vspace*{\stretch{1}}
 Adiabatic walls prevent thermal interaction (i.e. heat exchange) 
 \vspace*{\stretch{1}}
@@ -120,10 +107,6 @@ Adiabatic walls prevent thermal interaction (i.e. heat exchange)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{flashcard}[Thermodynamics]{What type of walls does a thermally isolated system have?}
-
-What type of walls does a thermally
- isolated system have?
-
 \vspace*{\stretch{1}}
 A thermally isolated system has adiabatic walls.
 \vspace*{\stretch{1}}
@@ -131,30 +114,29 @@ A thermally isolated system has adiabatic walls.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{flashcard}[Electromagnetism]{What is Maxwell's II  and what does it tell us?}
-What is Maxwell's II and what does it tell us?
+\begin{flashcard}[Electromagnetism]{What is Maxwell's II  and what does it express?}
 \vspace*{\stretch{1}}
 $$\nabla \cdot \mathbf{B} = 0$$
+There are no magnetic monopoles.
 \vspace*{\stretch{1}}
 \end{flashcard}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{flashcard}[Statistical Mechanics]{￼￼￼￼What is the equilibrium entropy of an isolated system of N constituents with energy E? }
-What is the equilibrium entropy of an isolated system of N constituents with energy E?
+\begin{flashcard}[Statistical Mechanics]{￼￼￼￼What is the equilibrium entropy of an isolated system of N constituents with energy E?}
+Equilibrium entropy of an isolated system is expressed as follows:
 \vspace*{\stretch{1}}
-$$S(N, E) = k ln \Omega(N, E, {\alpha*})$$
+$$S(N, E) = \mathrm{k ln \Omega(N, E, {\alpha*})}$$
 \vspace*{\stretch{1}}
 
 \end{flashcard}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{flashcard}[Diffraction physics]{Define the electric displacement of a dialectric.}
-Define the electric displacement of a dialectric
+\begin{flashcard}[Diffraction physics]{Define the electric displacement of a dielectric.}
 \vspace*{\stretch{1}}
 $$\underline{D}=\epsilon_0 \underline{E}+\underline{P}$$
-Where $ \underline{E}=$ Electric field , $\underline{P}=$ Polarisation
+Where $ \mathbf{E}$ is the electric field, $\mathbf{P}$ is the polarisation
 \vspace*{\stretch{1}}
 
 \end{flashcard}
@@ -162,23 +144,66 @@ Where $ \underline{E}=$ Electric field , $\underline{P}=$ Polarisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{flashcard}[Diffraction Physics]{What are the refractive indices of $\mathrm{Mg F_{2}}$ and $\mathrm{Al_{2}O_{3}}$ ?}
-Define the electric displacement of a dialectric
 
 \begin{table}[htdp]
-\caption{default}
+\caption{A table of refractive indices}
 \begin{tabular}{| r | c | r | c | r |}
- & n  \\
+\hline
+Material & Symbol & n  \\
 \hline
 Magnesium Fluoride & $\mathrm{Mg F_{2}}$ & 1.38 \\
 Aluminium Oxide & $\mathrm{Al_{2}O_{3}}$ & 1.62 \\
 \hline
-
 \end{tabular}
 \label{default}
 \end{table}%
-
+\end{flashcard}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{flashcard}[Quantum Mechanics]{What is the wave function for a free particle?}
+The quantum mechanical interpretation of a free particle is expressed as follows
+\vspace*{\stretch{1}}
+$$\psi(\mathbf{r},t)=C e^{\frac{i}{\hbar}(\mathbf{p}\cdot \mathbf{r}-\epsilon t)}$$
+\vspace*{\stretch{1}}
 
 \end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flashcard}[Electromagnetism]{Express the force between two charges.}
+The force between two charges, $q_{1}$ and $q_{2}$ that a separated by a distance $r$ should be expressed as follows:
+\vspace*{\stretch{1}}
+$$\mathbf{F}=\frac{q_{1} q_{2}}{4\pi \epsilon_{0} r^2} \mathbf{r} $$
+\vspace*{\stretch{1}}
+Where $\epsilon_{0}$ is the permittivity of free space.
+
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{flashcard}[Electromagnetism]{What is the total charge contained within a volume?}
+\vspace*{\stretch{1}}
+$$Q_v=\int_{V}{\rho(\underline{r})dV}$$
+Where $\rho$ is the sum of the charges.\vspace*{\stretch{1}}
+
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{flashcard}[Diffraction Physics]{What happens when we apply a field to an electrically insulating material such as glass?}
+\vspace*{\stretch{1}}
+The charges will separate causing a polarisation in the material.
+\vspace*{\stretch{1}}
+
+\end{flashcard}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 
 
 
