@@ -1,0 +1,59 @@
+\documentclass{standalone}
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgffor}
+\usepgfmodule{shapes}
+\usepgfmodule{plot}
+\usetikzlibrary{decorations}
+\usetikzlibrary{arrows}
+\usetikzlibrary{snakes}
+
+\newcommand{\Koordinatenkreuz}[6]{
+}
+\newcommand{\KoordinatenkreuzOhneLabelsVerschobenKeinPfeil}[5]{
+    \draw[-] (#1,0) -- (#2,0);
+
+}
+\newcommand{\ZeigerdiagrammText}[4]{
+\begin{tikzpicture}[scale=.72, samples=100, >=latex]
+
+    \def\Alpha{#1}
+    \def\Phase{#2}
+    \def\AmplitudeSpannung{#3}
+    \def\AmplitudeStrom{#4}
+    \def\SpannungsWert{{\AmplitudeSpannung*sin(\Alpha)}}
+    \def\StromWert{{\AmplitudeStrom*sin(\Alpha+\Phase)}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \def\FarbeSpannung{blue!90!white}
+    \def\FarbeStrom{red!90!white}
+    \def\FarbeWinkelZeichnung{red}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \def\Beta{\Alpha+\Phase}
+    \def\AlphaRad{\Alpha*3.141592654/180}
+    \def\PhaseRad{\Phase*3.141592654/180}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \KoordinatenkreuzOhneLabelsVerschobenKeinPfeil{-0.2}{-3.6}{-0.0}{0.0}{-0.0}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % voltage circle
+    % angle in the circle
+    \filldraw[fill=\FarbeWinkelZeichnung!20,draw=\FarbeWinkelZeichnung!50!black] (-4,0) -- (-3,0) arc (0:\Alpha:1) -- cycle node[right] {$\beta$};
+        % pointer
+    \draw[<-,color=\FarbeStrom, very thick] (\Beta:\AmplitudeStrom)++(-4,0) --(-4,0);
+    \draw[-,color=\FarbeSpannung, dashed] (\Beta:\AmplitudeStrom)++(-4,0) --(-3.1,0); {$\alpha$};
+        \draw[-,color=\FarbeStrom, thick] (-3.7,0) --(-4,0);
+
+
+    % angular velocity \omega
+    \draw[->, xshift=-2.5cm]  (140:2.2cm) arc (100:180:2) node[below] {$\omega$};
+     \end{tikzpicture}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\begin{document}
+
+\ZeigerdiagrammText{60}{0}{2.7}{1.8}
+
+
+\end{document}
